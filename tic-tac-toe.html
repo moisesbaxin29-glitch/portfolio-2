@@ -1,14 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <title>YOUR NAME | TIC TAC TOE</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <p>Moises Baxin</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a>About Me</a>
+                <a>Projects</a>
+            </nav>
+        </header>
+        <main>
+            <div id="player-data">
+                <p id="player-label">Current Player: </p>
+                <p id="current-player">X</p>
+            </div>
+            
+            <!-- Message display for game status / draws -->
+            <p id="message"></p>
 
-<head>
-    <h1> Moises Baxin</h1>
-    <nav>
-        <a href="#Home">Home</a>        
-        <a href="#about-Me">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#Skills">Skills</a>
-    </nav>
-</head>
+            <!-- Scoreboard -->
+            <p id="x-score">X: 0</p>
+            <p id="o-score">O: 0</p>
+            <p id="draw-score">Draws: 0</p>
 
-</html> 
+            <div class="container">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <button id="reset">Reset</button>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
