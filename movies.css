@@ -1,4 +1,4 @@
-/* Step 2: A dark page and a flex header */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@ header {
   background-color: black;
 }
 
-/* Step 3: Nav buttons with a smooth hover */
+
 .nav-btn {
   padding: 10px 20px;
   border: 2px solid white;
@@ -29,7 +29,6 @@ header {
   color: black;
 }
 
-/* Step 4: A grid of movie posters */
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -43,7 +42,7 @@ header {
   border-radius: 8px;
 }
 
-/* Step 5: Cards that grow on hover */
+
 .card {
   background-color: #1F1F1F;
   border-radius: 12px;
@@ -59,7 +58,6 @@ header {
   transform: scale(1.05);
 }
 
-/* Step 6: Rating badges with two classes */
 .rating {
   display: inline-block;
   padding: 4px 10px;
@@ -75,7 +73,6 @@ header {
   background-color: #C62828;
 }
 
-/* Step 7: One featured banner with an ID */
 #featured {
   margin: 32px;
   padding: 48px 32px;
@@ -87,7 +84,7 @@ header {
   font-size: 40px;
 }
 
-/* Step 8: A loading spinner with @keyframes */
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -107,9 +104,3 @@ header {
   animation: spin 1s linear infinite;
 }
 
-.loader {
-  display: none;
-  width: 50px;
-  height: 50px;
-  /* ...rest of your loader code */
-}
