@@ -97,7 +97,7 @@ function resetGame() {
 
   for (const square of squares) {
     square.textContent = '';
-  }
+  }  
 }
 
 // Event Listeners
@@ -106,3 +106,89 @@ for (const square of squares) {
 }
 
 resetButton.addEventListener('click', resetGame);
+
+// 1. Define a function, then call it
+function showTonight() {
+  console.log("Tonight's lineup:");
+}
+
+showTonight();
+
+// 2. Send a value in with a parameter
+function announceMovie(title) {
+  console.log("Up next: " + title);
+}
+
+announceMovie("Wicked");
+announceMovie("Dune: Part Two");
+announceMovie("Inside Out 2");
+
+// 3. Pick the right TMDB list
+function getEndpoint(page) {
+  if (page === "upcoming") {
+    return "upcoming";
+  } else if (page === "popular") {
+    return "popular";
+  } else if (page === "top-rated") {
+    return "top_rated";
+  }
+}
+
+console.log(getEndpoint("popular"));
+console.log(getEndpoint("top-rated"));
+
+// 4. Build a poster URL
+const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
+
+function makePosterUrl(posterPath) {
+  return IMAGE_URL + posterPath;
+}
+
+console.log(makePosterUrl("/poster.jpg"));
+
+// 5. Check a rating
+function isHighlyRated(rating) {
+  return rating >= 7;
+}
+
+console.log(isHighlyRated(8.2));
+console.log(isHighlyRated(5.5));
+
+// 6. Two parameters
+function makeMovieLine(title, rating) {
+  return title + " (" + rating + " / 10)";
+}
+
+let line = makeMovieLine("Wicked", 7.4);
+console.log(line);
+
+// 7. Use a function inside a loop
+const ratings = [8.2, 5.5, 7, 6.9];
+
+for (let i = 0; i < ratings.length; i++) {
+  if (isHighlyRated(ratings[i])) {
+    console.log(ratings[i] + " is a great pick!");
+  }
+}
+// Grab all three buttons from the HTML
+const buttons = document.querySelectorAll(".nav-btn");
+const bannerTitle = document.querySelector("#featured h2");
+const loader = document.querySelector(".loader");
+
+// Loop through each button and listen for a click
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function () {
+    // 1. Get the text on the button (e.g. "Popular")
+    let buttonText = buttons[i].textContent;
+
+    // 2. Change the blue banner's heading
+    bannerTitle.textContent = buttonText;
+
+    // 3. Hide the spinning loader
+    loader.style.display = "none";
+
+    // 4. Test your getEndpoint function in the Console
+    let pageName = buttonText.toLowerCase().replace(" ", "-");
+    console.log("Loading endpoint:", getEndpoint(pageName));
+  });
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Night</title>
+  <!-- Step 1: Link the stylesheet -->
+  <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+
+  <header>
+    <h1>Movie Night</h1>
+    <nav>
+      <a href="index.html"> <button class="nav-btn">Home</button></a>
+      <button class="nav-btn">Popular</button>  
+      <button class="nav-btn">Top Rated</button>
+      <button class="nav-btn">Upcoming</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="featured">
+      <h2>Featured tonight</h2>
+      <div class="loader"></div>
+    </section>
+
+    <section class="movie-grid">
+      <div class="card">
+        <div class="poster"></div>
+        <h3>Wicked</h3>
+        <p class="rating high">8.1</p>
+      </div>
+
+      <div class="card">
+        <div class="poster"></div>
+        <h3>Dune: Part Two</h3>
+        <p class="rating high">8.5</p>
+      </div>
+
+      <div class="card">
+        <div class="poster"></div>
+        <h3>Inside Out 2</h3>
+        <p class="rating high">7.7</p>
+      </div>
+
+      <div class="card">
+        <div class="poster"></div>
+        <h3>Madame Web</h3>
+        <p class="rating low">4.0</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
